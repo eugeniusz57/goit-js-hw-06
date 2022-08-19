@@ -4,7 +4,7 @@ form.addEventListener('submit', onSubmit);
 
 function onSubmit(event){
     event.preventDefault();
-    const obj = [];
+    let obj = {};
     const email = event.currentTarget.elements.email.value;
     const password = event.currentTarget.elements.password.value;
     if(email === ""){
@@ -17,13 +17,12 @@ function onSubmit(event){
     const formData = new FormData(event.currentTarget)
    
     formData.forEach((value, name) => {
-    //    console.log(name);
-    //    console.log(value);
-       obj.push({
-        [name]: value,})
+       obj = {
+        ...obj,
+        [name]: value,}
         })
-
-   
+        
     console.log(obj);
- form.reset();
+
+    form.reset();
 }
