@@ -30,6 +30,3 @@ const makeGalerys = images.map(makeGaleryLists).join('');
 console.log(makeGalerys);
 listEl.insertAdjacentHTML('beforeend', makeGalerys )
 
-
-//  const elements = images.map(makeGaleryLists);
-// listEl.append(...elements);
